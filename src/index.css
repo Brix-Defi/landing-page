@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.blue__gradient {
+  background: linear-gradient(134deg, #172554 0%, #1d4ed8 100%);
+  filter: blur(70px);
+}
+
+.green__gradient {
+  background: linear-gradient(61deg, #00a9ad 0%, #364b44 100%);
+  filter: blur(50px);
+}
+
+.blueNav__gradient {
+  background: linear-gradient(134deg, #1d4ed8 0%, #172554 100%);
+  filter: blur(34px);
+}
+
+.cyan__gradient {
+  background: linear-gradient(61deg, #172554 0%, #06b6d4 100%);
+  filter: blur(50px);
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.navbar {
+  background: linear-gradient(
+    -61deg,
+    rgb(0, 0, 0, 0.5) 0%,
+    rgb(0, 0, 0, 0.3) 100%
+  );
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.activeNav {
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.hiddenNav {
+  visibility: hidden;
+  transition: all 0.5s;
+  transform: translateY(-100%);
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    /* #bfdbfe 0.89%,
+    #60a5fa 17.23%,
+    #3b82f6 42.04%,
+    #2563eb 55.12%,
+    #1d4ed8 71.54%,
+    #1e40af 100% */
+    #3eb699 0.89%,
+    #00a9ad 17.23%,
+    #0099bf 42.04%,
+    #0085c8 55.12%,
+    #006dc3 71.54%,
+    #6150ab 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    45deg,
+    rgba(30, 58, 138, 0.7) 0%,
+    rgba(59, 130, 246, 0.1) 100%
+  );
+}
+
+.bg-blue-gradient:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.2) 0%,
+    rgba(59, 130, 246, 0.7) 100%
+  );
+}
+
+.bg-green-gradient {
+  background: linear-gradient(
+    45deg,
+    rgba(62, 182, 153, 0.8) 0%,
+    rgba(0, 128, 102, 0.5) 100%
+  );
+}
+
+.bg-green-gradient:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 128, 102, 0.5) 0%,
+    rgba(62, 182, 153, 0.8) 100%
+  );
+}
