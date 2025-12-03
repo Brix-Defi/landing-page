@@ -63,7 +63,7 @@ const Home = () => {
               "pt-2 sm:pt-6 md:pt-9 lg:pt-12"
             )}
           >
-            Strategy on <span className="text-gradient">Autopilot</span> -{" "}
+            Strategy on <span className="text-gradient">Autopilot</span>:<br />{" "}
             <span>{text}</span>
           </motion.div>
 

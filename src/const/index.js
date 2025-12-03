@@ -19,6 +19,7 @@ export const navLinks = [
     id: "contact",
     title: "Contact Us",
   },
+  { id: "launch-app", title: "Launch App" },
 ];
 
 export const whyMazig = [

@@ -55,15 +55,27 @@ const NavBar = () => {
       />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-normal cursor-pointer text-[16px] text-white hover:tracking-wider transition-all duration-300 ease-in-out
+        {navLinks.map((nav, index) => {
+          const href =
+            nav.id === "launch-app" ? "https://brix.mazig.io/" : `#${nav.id}`;
+          return (
+            <li
+              key={nav.id}
+              className={`font-normal cursor-pointer text-[16px] text-white hover:tracking-wider transition-all duration-300 ease-in-out
             ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-          >
-            <a href={`#${nav.id}`}>{nav.title}</a>
-          </li>
-        ))}
+            >
+              <a
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  href.startsWith("http") ? "noreferrer noopener" : undefined
+                }
+              >
+                {nav.title}
+              </a>
+            </li>
+          );
+        })}
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -87,15 +99,31 @@ const NavBar = () => {
           )}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] text-white
+            {navLinks.map((nav, index) => {
+              const href =
+                nav.id === "launch-app"
+                  ? "https://brix.mazig.io/"
+                  : `#${nav.id}`;
+              return (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] text-white
                  ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
+                >
+                  <a
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      href.startsWith("http")
+                        ? "noreferrer noopener"
+                        : undefined
+                    }
+                  >
+                    {nav.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
