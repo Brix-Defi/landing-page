@@ -54,7 +54,7 @@ const Contact = () => {
     return (
       <form
         onSubmit={handleSubmit}
-        className="flex items-center justify-center gap-3"
+        className="flex items-center justify-center"
       >
         <input
           type="email"
@@ -66,7 +66,7 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-white text-primary font-semibold rounded-r-full shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_0_30px_rgba(59,130,246,0.18)] transition-all"
+          className="px-4 py-2 bg-white text-primary font-semibold rounded-r-full shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_0_30px_rgba(59,130,246,0.18)] transition-all ml-3"
         >
           Notify Me
         </button>

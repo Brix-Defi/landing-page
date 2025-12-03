@@ -51,6 +51,7 @@ const Home = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={twMerge(
           "h-screen",
+          "min-h-[-webkit-fill-available]", /* Safari iOS fix */
           "relative",
           "flex justify-start items-center"
         )}
@@ -80,9 +81,10 @@ const Home = () => {
               </motion.div>
               <div
                 className={twMerge(
-                  "gap-4 md:gap-6",
+                  "space-y-4 md:space-y-6", /* Safari-friendly alternative to gap */
                   "pt-2 sm:pt-4 md:pt-6",
-                  "flex flex-row xs:flex-col sm:flex-row"
+                  "flex flex-row xs:flex-col sm:flex-row",
+                  "[&>*+*]:ml-4 [&>*+*]:md:ml-6 xs:[&>*+*]:ml-0 sm:[&>*+*]:ml-4 sm:[&>*+*]:md:ml-6" /* gap fallback */
                 )}
               >
                 <HomeButton
